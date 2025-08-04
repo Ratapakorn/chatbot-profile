@@ -1,80 +1,125 @@
 const responses = [
-  // --- Personal Intro ---
   {
-    keywords: ["who are you", "your name", "introduce yourself", "what's your name", "tell me about yourself", "who is ratapakorn"],
-    answer: "I'm Ratapakorn Linsa-nguan, a Computer Science and AI student at THI in Germany. I love building tech that solves real problems."
+    keywords: [
+      "who are you", "introduce yourself", "what's your name", "tell me about yourself",
+      "who is this", "who am I talking to", "can you tell me who you are"
+    ],
+    answer: "I'm Ratapakorn Linsa-nguan — a Computer Science and AI student at THI in Germany. I'm passionate about building useful, human-centered technology."
   },
+
+  // --- Location ---
   {
-    keywords: ["where are you from", "your hometown", "place of birth", "what country are you from", "nationality"],
-    answer: "I'm from Bangkok, Thailand — currently living and studying in Germany."
+    keywords: [
+      "where are you from", "your hometown", "which country are you from", "what city are you from", "your origin"
+    ],
+    answer: "I'm originally from Bangkok, Thailand — and I’m currently studying and living in Germany."
   },
 
   // --- Education ---
   {
-    keywords: ["what do you study", "your major", "studying", "what course are you in", "your degree", "what is your field", "what program are you doing"],
-    answer: "I'm studying Computer Science and Artificial Intelligence at Technische Hochschule Ingolstadt (THI), Germany."
+    keywords: [
+      "what do you study", "your major", "what is your field", "your degree", "what are you studying",
+      "what course are you in", "what subject do you specialize in"
+    ],
+    answer: "I'm studying Computer Science and Artificial Intelligence at Technische Hochschule Ingolstadt in Germany."
   },
   {
-    keywords: ["which university", "where do you study", "what school do you go to", "college name", "your university"],
-    answer: "I study at Technische Hochschule Ingolstadt, a university of applied sciences in Bavaria, Germany."
-  },
-
-  // --- Languages & Tech ---
-  {
-    keywords: ["programming languages", "which languages do you use", "languages you know", "coding languages", "tech stack", "developer stack", "your tools", "frameworks you know", "software stack"],
-    answer: "I’m confident with Python, JavaScript, Java, HTML/CSS, SQL, Dart/Flutter, and I’ve also worked with C/C++, PHP, and Cypher (Neo4j)."
-  },
-  {
-    keywords: ["what tools do you use", "frameworks", "your tools", "docker", "git", "databases", "editors", "what ide", "programming tools"],
-    answer: "I work with Docker, Git, PostgreSQL, MongoDB, Eclipse, and Visual Studio. I’ve also used Firebase and JavaFX in projects."
+    keywords: [
+      "which university", "what school do you go to", "what's your college", "where do you study"
+    ],
+    answer: "I study at Technische Hochschule Ingolstadt, a university of applied sciences located in Bavaria, Germany."
   },
 
-  // --- Projects ---
+  // --- Skills / Tech ---
   {
-    keywords: ["favorite project", "cool project", "memorable", "project you built", "best project", "most interesting project", "alzheimer", "mobile app"],
-    answer: "One of my favorite projects is 'Memorable' — a mobile app designed to help individuals with Alzheimer's through memory games and smart reminders."
+    keywords: [
+      "programming languages", "which languages do you use", "what languages do you know",
+      "coding skills", "languages you're good at", "what can you code in"
+    ],
+    answer: "I’m confident with Python, JavaScript, Java, HTML/CSS, SQL, Dart/Flutter, and have also worked with C/C++ and PHP."
   },
   {
-    keywords: ["ai project", "collision avoidance", "drones", "aircraft", "autonomous flying", "drone project", "mid-air", "safety project"],
-    answer: "In one seminar, I researched AI-powered collision avoidance in autonomous aircraft — exploring both real-time detection and prevention using AI and sensor fusion."
-  },
-  {
-    keywords: ["media player", "java project", "audio video project", "javafx app", "media"],
-    answer: "I also developed a Java Media Player app with JavaFX, supporting playlist management and full playback controls like pause, seek, and volume adjustment."
-  },
-
-  // --- Experience ---
-  {
-    keywords: ["work experience", "internships", "have you worked", "past jobs", "job history", "professional experience"],
-    answer: "While I’m early in my career, I’ve taken leadership roles in academic and volunteer projects, and I’m looking forward to gaining hands-on experience through internships."
-  },
-  {
-    keywords: ["volunteer work", "charity", "gift4schools", "ngo", "community service", "it supervisor"],
-    answer: "I worked as an IT Supervisor for Gift4Schools, a charity project where I managed digital registration systems and supported backend operations for volunteer coordination."
-  },
-  {
-    keywords: ["hackathons", "teamwork", "collaboration", "group work", "team projects"],
-    answer: "I’ve participated in multiple hackathons in Germany and collaborated with diverse teams to solve real-world challenges under time pressure."
+    keywords: [
+      "tools you use", "your tech stack", "frameworks", "what technologies do you work with",
+      "software you use", "your development environment"
+    ],
+    answer: "I use tools like Git, Docker, PostgreSQL, MongoDB, and IDEs like Eclipse and Visual Studio. I also work with Firebase and JavaFX."
   },
 
-  // --- Soft Skills & Personality ---
+  // --- Projects (Grouped) ---
   {
-    keywords: ["soft skills", "communication", "problem solving", "collaboration", "team skills", "adaptability", "your strengths"],
-    answer: "I’m a strong communicator, adaptable in multicultural teams, and thrive in problem-solving situations. I value clear thinking, teamwork, and continuous learning."
+    keywords: [
+      "what projects have you done", "your past projects", "tell me about your projects",
+      "portfolio projects", "examples of your work", "previous work"
+    ],
+    answer: "Some of the projects I've worked on include: 'Memorable' — a mobile app to support people with Alzheimer’s, a Java-based media player with playlist and playback features, and a seminar on AI-driven collision avoidance in autonomous aircraft. You can explore more on my GitHub!"
   },
   {
-    keywords: ["hobbies", "interests", "what do you like", "free time", "your passion", "fun facts"],
-    answer: "I enjoy reading about physics — especially general relativity — and exploring how AI and software can solve meaningful problems."
+    keywords: [
+      "favorite project", "project you enjoyed", "most interesting project", "a project you liked the most"
+    ],
+    answer: "'Memorable' is a project I’m especially proud of. It’s a mobile app designed to support cognitive health in people with Alzheimer’s using games and reminders."
+  },
+  {
+    keywords: [
+      "ai project", "machine learning project", "collision avoidance", "drone safety project", "ai system", "autonomous project"
+    ],
+    answer: "I explored AI-powered collision avoidance in autonomous aircraft — focusing on real-time detection, path planning, and sensor fusion for safer flight systems."
+  },
+  {
+    keywords: [
+      "media player", "audio video player", "project in java", "music player app", "video app project"
+    ],
+    answer: "I developed a media player in Java using JavaFX. It supports playing audio and video files, playlist management, and basic controls like seek and volume."
   },
 
-  // --- Contact / Online ---
+  // --- Experience / Work ---
   {
-    keywords: ["contact", "email", "linkedin", "github", "socials", "how can i reach you", "connect"],
-    answer: "Sure! GitHub: github.com/Ratapakorn, LinkedIn: linkedin.com/in/ratapakorn-linsa-nguan-0a3baa288/, Email: ratapakorn@gmail.com"
+    keywords: [
+      "do you have work experience", "what work have you done", "any internships",
+      "have you worked before", "jobs you’ve had"
+    ],
+    answer: "I’ve taken leadership roles in academic and volunteer projects, and I’m currently seeking internship opportunities to gain industry experience."
   },
   {
-    keywords: ["can i talk to you", "can we connect", "message you", "how do i get in touch"],
-    answer: "Absolutely! You can reach out via email or LinkedIn. I'm always open to interesting discussions or collaboration opportunities."
+    keywords: [
+      "volunteer work", "charity work", "gift4schools", "did you volunteer", "social projects"
+    ],
+    answer: "I served as IT Supervisor for a charity project called Gift4Schools, managing registration systems and data workflows for volunteers."
+  },
+  {
+    keywords: [
+      "hackathons", "teamwork", "group collaboration", "have you worked in teams", "project teams"
+    ],
+    answer: "Yes! I've participated in hackathons in Germany and collaborated with diverse teams to solve real-world problems under time pressure."
+  },
+
+  // --- Personal Qualities ---
+  {
+    keywords: [
+      "soft skills", "what are your strengths", "interpersonal skills", "what are you good at besides coding"
+    ],
+    answer: "I'm a clear communicator, good at working in teams, and flexible in fast-changing environments. I value thoughtful problem solving and always seek to improve."
+  },
+  {
+    keywords: [
+      "hobbies", "interests", "what do you like doing", "free time", "personal interests"
+    ],
+    answer: "I enjoy learning about general relativity and physics, exploring AI applications, and creating tools that solve meaningful problems."
+  },
+
+  // --- Contact / Socials ---
+  {
+    keywords: [
+      "how can I contact you", "your email", "linkedin profile", "github link", "contact information", "how to reach you"
+    ],
+    answer: "You can contact me via email at ratapakorn@gmail.com, or connect on GitHub (github.com/Ratapakorn) or LinkedIn."
+  },
+  {
+    keywords: [
+      "can I talk to you", "can we connect", "how to message you", "can I reach out"
+    ],
+    answer: "Absolutely! I'm always open to connecting. Just reach out through email or LinkedIn and I’ll get back to you."
   },
   // --- แนะนำตัว ---
 {

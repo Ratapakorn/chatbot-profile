@@ -201,6 +201,15 @@ const responses = [
 
 ];
 
+// Handle suggestion clicks
+document.querySelectorAll(".suggestion").forEach(button => {
+  button.addEventListener("click", () => {
+    const input = document.getElementById("user-input");
+    input.value = button.textContent;
+    document.getElementById("send-btn").click();
+  });
+});
+
 function isThai(text) {
   return /[\u0E00-\u0E7F]/.test(text);
 }

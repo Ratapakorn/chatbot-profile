@@ -1,4 +1,4 @@
-# 🤖 Personal Chatbot – RatapakornBot
+# 🤖 Personal Chatbot – Profile
 
 Welcome to my personal chatbot project — a fully client-side web chatbot that introduces **me**, Ratapakorn Linsa-nguan. It’s designed to answer questions about my background, projects, skills, and interests — in both **English and Thai** 🇬🇧 🇹🇭.
 

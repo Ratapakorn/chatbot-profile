@@ -72,6 +72,31 @@ body {
   border-top: 1px solid #e0e0e0;
   padding: 12px;
   background-color: white;
+  
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  background-color: #f9fafb;
+  border-top: 1px solid #e0e0e0;
+  justify-content: center;
+}
+
+.suggestion {
+  background-color: #e0e7ff;
+  color: #1e3a8a;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.suggestion:hover {
+  background-color: #c7d2fe;
 }
 
 #user-input {
